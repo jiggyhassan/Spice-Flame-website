@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Spice & Flame - A modern, cozy restaurant offering delicious starters, mains, desserts, and drinks. Reserve a table or order online." />
+  <title>Spice & Flame | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="Spice & Flame Home">
+        <img src="assets/logo.svg" alt="Spice & Flame logo" class="logo" />
+        <span class="brand-name">Spice & Flame</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-label="Open Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html">Order Online</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" role="banner" aria-label="Welcome">
+    <div class="hero-bg" style="--bg:url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1800&q=80')"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content reveal">
+      <h1 class="hero-title">Taste the Warmth</h1>
+      <p class="hero-subtitle">Modern flavors, cozy vibes. Crafted with passion and fresh ingredients.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="menu.html">View Menu</a>
+        <a class="btn btn-outline" href="reservations.html">Reserve a Table</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about" aria-labelledby="about-title">
+    <div class="container about-grid">
+      <div class="about-text reveal">
+        <h2 id="about-title" class="section-title">About Us</h2>
+        <p>
+          Welcome to Spice & Flame, where every dish tells a story. From sizzling starters to decadent desserts,
+          our menu is designed to excite your taste buds and warm your soul. Join us for an intimate dining
+          experience or order online to enjoy restaurant-quality meals at home.
+        </p>
+        <ul class="about-highlights">
+          <li><i class="fa-solid fa-pepper-hot"></i> Signature spice blends</li>
+          <li><i class="fa-solid fa-leaf"></i> Fresh, locally sourced ingredients</li>
+          <li><i class="fa-solid fa-martini-glass-citrus"></i> Curated drinks & mocktails</li>
+        </ul>
+        <div class="about-ctas">
+          <a class="btn btn-primary" href="order.html">Order Online</a>
+          <a class="btn btn-ghost" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+      <div class="about-media reveal">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80" alt="Cozy restaurant interior" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured categories -->
+  <section class="section featured" aria-labelledby="featured-title">
+    <div class="container">
+      <h2 id="featured-title" class="section-title reveal">Our Favorites</h2>
+      <div class="cards-grid">
+        <article class="card reveal">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1523986371872-9d3ba2e2a389?auto=format&fit=crop&w=800&q=80" alt="Starter platter" />
+          <div class="card-body">
+            <h3>Starters</h3>
+            <p>Crispy bites and vibrant flavors to start your meal right.</p>
+            <a class="card-link" href="menu.html#starters">Explore</a>
+          </div>
+        </article>
+        <article class="card reveal">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Main dish" />
+          <div class="card-body">
+            <h3>Main Dishes</h3>
+            <p>Hearty plates cooked to perfection with bold aromas.</p>
+            <a class="card-link" href="menu.html#mains">Explore</a>
+          </div>
+        </article>
+        <article class="card reveal">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1541781286675-3f9a0a7d9b93?auto=format&fit=crop&w=800&q=80" alt="Dessert" />
+          <div class="card-body">
+            <h3>Desserts</h3>
+            <p>Sweet endings that melt in your mouth.</p>
+            <a class="card-link" href="menu.html#desserts">Explore</a>
+          </div>
+        </article>
+        <article class="card reveal">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=80" alt="Refreshing drink" />
+          <div class="card-body">
+            <h3>Drinks</h3>
+            <p>From fresh juices to crafted mocktails and more.</p>
+            <a class="card-link" href="menu.html#drinks">Explore</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="brand footer-brand">
+          <img src="assets/logo.svg" alt="Spice & Flame logo" class="logo" />
+          <span class="brand-name">Spice & Flame</span>
+        </a>
+        <p class="muted">Modern, cozy dining in the heart of the city.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>123 Spice Street, Foodville 45678</p>
+        <p>Open daily: 11:00 - 23:00</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>+1 (555) 123-4567</p>
+        <p>hello@spiceandflame.com</p>
+        <div class="socials">
+          <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://tiktok.com" aria-label="TikTok" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> Spice & Flame. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

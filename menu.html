@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore our menu: starters, main dishes, desserts, and drinks. Warm, modern flavors at Spice & Flame." />
+  <title>Spice & Flame | Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .menu-hero { padding: 64px 0 20px; text-align: center; }
+    .filters { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 10px 0 24px; }
+    .filters .btn { padding: 10px 14px; }
+    .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 992px) { .menu-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) { .menu-grid { grid-template-columns: 1fr; } }
+    .menu-card { background: var(--surface); border: 1px solid rgba(255,255,255,.06); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: grid; grid-template-rows: 180px auto; }
+    .menu-card img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+    .menu-card .body { padding: 14px; display: grid; gap: 8px; }
+    .menu-card .row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .price { font-weight: 700; color: #ffd77a; }
+    .category-tag { font-size: .8rem; opacity: .85; }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="Spice & Flame Home">
+        <img src="assets/logo.svg" alt="Spice & Flame logo" class="logo" />
+        <span class="brand-name">Spice & Flame</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-label="Open Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="menu.html">Menu</a></li>
+          <li><a href="order.html">Order Online</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="menu-hero">
+      <div class="container">
+        <h1 class="section-title">Our Menu</h1>
+        <p class="muted">Sizzling starters, soulful mains, decadent desserts, and refreshing drinks.</p>
+
+        <div class="filters">
+          <button class="btn btn-ghost" data-filter="all">All</button>
+          <button class="btn btn-ghost" data-filter="starters">Starters</button>
+          <button class="btn btn-ghost" data-filter="mains">Main Dishes</button>
+          <button class="btn btn-ghost" data-filter="desserts">Desserts</button>
+          <button class="btn btn-ghost" data-filter="drinks">Drinks</button>
+        </div>
+
+        <div class="menu-grid" id="menu-grid">
+          <!-- Starters -->
+          <article class="menu-card reveal" data-category="starters" id="starters">
+            <img src="https://images.unsplash.com/photo-1550409175-2b2d6d19a08b?auto=format&fit=crop&w=900&q=80" alt="Crispy Spring Rolls" />
+            <div class="body">
+              <div class="row"><h3>Crispy Spring Rolls</h3><span class="price">$6.50</span></div>
+              <p class="muted">Golden rolls filled with veggies and spice, served with dipping sauce.</p>
+              <div class="row"><span class="badge category-tag">Starters</span><a class="btn btn-primary" href="order.html?dish=Crispy%20Spring%20Rolls">Order Now</a></div>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="starters">
+            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=80" alt="Spicy Wings" />
+            <div class="body">
+              <div class="row"><h3>Spicy Wings</h3><span class="price">$8.90</span></div>
+              <p class="muted">Glazed with our signature flame sauce and sesame.</p>
+              <div class="row"><span class="badge category-tag">Starters</span><a class="btn btn-primary" href="order.html?dish=Spicy%20Wings">Order Now</a></div>
+            </div>
+          </article>
+
+          <!-- Mains -->
+          <article class="menu-card reveal" data-category="mains" id="mains">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80" alt="Grilled Steak" />
+            <div class="body">
+              <div class="row"><h3>Grilled Steak</h3><span class="price">$19.50</span></div>
+              <p class="muted">Juicy premium cut with herbed butter and roasted potatoes.</p>
+              <div class="row"><span class="badge category-tag">Main Dishes</span><a class="btn btn-primary" href="order.html?dish=Grilled%20Steak">Order Now</a></div>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="mains">
+            <img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=900&q=80" alt="Spiced Chicken Bowl" />
+            <div class="body">
+              <div class="row"><h3>Spiced Chicken Bowl</h3><span class="price">$14.90</span></div>
+              <p class="muted">Charred chicken, fragrant rice, veggies, and house sauce.</p>
+              <div class="row"><span class="badge category-tag">Main Dishes</span><a class="btn btn-primary" href="order.html?dish=Spiced%20Chicken%20Bowl">Order Now</a></div>
+            </div>
+          </article>
+
+          <!-- Desserts -->
+          <article class="menu-card reveal" data-category="desserts" id="desserts">
+            <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?auto=format&fit=crop&w=900&q=80" alt="Molten Lava Cake" />
+            <div class="body">
+              <div class="row"><h3>Molten Lava Cake</h3><span class="price">$7.20</span></div>
+              <p class="muted">Warm chocolate cake with a gooey center and vanilla ice cream.</p>
+              <div class="row"><span class="badge category-tag">Desserts</span><a class="btn btn-primary" href="order.html?dish=Molten%20Lava%20Cake">Order Now</a></div>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="desserts">
+            <img src="https://images.unsplash.com/photo-1542834369-f10ebf06d3cb?auto=format&fit=crop&w=900&q=80" alt="Caramel Panna Cotta" />
+            <div class="body">
+              <div class="row"><h3>Caramel Panna Cotta</h3><span class="price">$6.90</span></div>
+              <p class="muted">Silky smooth cream dessert topped with warm caramel.</p>
+              <div class="row"><span class="badge category-tag">Desserts</span><a class="btn btn-primary" href="order.html?dish=Caramel%20Panna%20Cotta">Order Now</a></div>
+            </div>
+          </article>
+
+          <!-- Drinks -->
+          <article class="menu-card reveal" data-category="drinks" id="drinks">
+            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=900&q=80" alt="Citrus Cooler" />
+            <div class="body">
+              <div class="row"><h3>Citrus Cooler</h3><span class="price">$4.50</span></div>
+              <p class="muted">Lemon-lime fizz with mint and a hint of ginger.</p>
+              <div class="row"><span class="badge category-tag">Drinks</span><a class="btn btn-primary" href="order.html?dish=Citrus%20Cooler">Order Now</a></div>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="drinks">
+            <img src="https://images.unsplash.com/photo-1527161153335-c7e9b9a0cde0?auto=format&fit=crop&w=900&q=80" alt="Mango Lassi" />
+            <div class="body">
+              <div class="row"><h3>Mango Lassi</h3><span class="price">$4.90</span></div>
+              <p class="muted">Creamy mango yogurt drink with cardamom.</p>
+              <div class="row"><span class="badge category-tag">Drinks</span><a class="btn btn-primary" href="order.html?dish=Mango%20Lassi">Order Now</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="brand footer-brand">
+          <img src="assets/logo.svg" alt="Spice & Flame logo" class="logo" />
+          <span class="brand-name">Spice & Flame</span>
+        </a>
+        <p class="muted">Modern, cozy dining in the heart of the city.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>123 Spice Street, Foodville 45678</p>
+        <p>Open daily: 11:00 - 23:00</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>+1 (555) 123-4567</p>
+        <p>hello@spiceandflame.com</p>
+        <div class="socials">
+          <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://tiktok.com" aria-label="TikTok" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> Spice & Flame. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script>
+    // Category filter
+    const buttons = document.querySelectorAll('.filters [data-filter]');
+    const cards = document.querySelectorAll('.menu-card');
+    function setActive(btn){ buttons.forEach(b=>b.classList.remove('btn-primary')); btn.classList.add('btn-primary'); }
+    buttons.forEach(btn=>{
+      btn.addEventListener('click', () => {
+        const cat = btn.dataset.filter;
+        setActive(btn);
+        cards.forEach(card => {
+          const match = cat === 'all' || card.dataset.category === cat;
+          card.classList.toggle('hidden', !match);
+        });
+      });
+    });
+    // Default to all
+    const first = document.querySelector('.filters [data-filter="all"]');
+    if (first) first.click();
+  </script>
+</body>
+</html>

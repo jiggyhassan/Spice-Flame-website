@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with Spice & Flame. Find our address, phone, email, and map location." />
+  <title>Spice & Flame | Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .contact-wrap { padding: 60px 0; }
+    .grid { grid-template-columns: 1fr 1fr; }
+    .cardx { background: var(--surface); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow); }
+    .info { display: grid; gap: 8px; }
+    iframe { width: 100%; height: 360px; border: 0; border-radius: var(--radius); }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="Spice & Flame Home">
+        <img src="assets/logo.svg" alt="Spice & Flame logo" class="logo" />
+        <span class="brand-name">Spice & Flame</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-label="Open Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html">Order Online</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-wrap">
+      <div class="container">
+        <h1 class="section-title">Contact Us</h1>
+        <p class="muted">We'd love to hear from you. Reach us through any channel below.</p>
+        <div class="grid" style="gap:16px;">
+          <div class="cardx">
+            <h3 style="margin-top:0; font-family:Poppins;">Spice & Flame</h3>
+            <div class="info">
+              <p><i class="fa-solid fa-location-dot"></i> 123 Spice Street, Foodville 45678</p>
+              <p><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</p>
+              <p><i class="fa-solid fa-envelope"></i> hello@spiceandflame.com</p>
+              <div class="socials">
+                <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://tiktok.com" aria-label="TikTok" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="cardx">
+            <iframe loading="lazy" src="https://www.google.com/maps?q=Times%20Square%2C%20New%20York&output=embed" allowfullscreen referrerpolicy="no-referrer-when-downgrade" aria-label="Map of Spice & Flame"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="brand footer-brand">
+          <img src="assets/logo.svg" alt="Spice & Flame logo" class="logo" />
+          <span class="brand-name">Spice & Flame</span>
+        </a>
+        <p class="muted">Modern, cozy dining in the heart of the city.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>123 Spice Street, Foodville 45678</p>
+        <p>Open daily: 11:00 - 23:00</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>+1 (555) 123-4567</p>
+        <p>hello@spiceandflame.com</p>
+        <div class="socials">
+          <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://tiktok.com" aria-label="TikTok" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> Spice & Flame. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
